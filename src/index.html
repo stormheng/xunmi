@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Lemon Navigation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="site-header">
+
+        <div class="lemon">
+            <svg class="icon">
+                <use xlink:href="#icon-dog"></use>
+            </svg>
+        </div>
+        <form class="select-form" action="https://www.baidu.com/s" method="get">
+            <input autocomplete="off" placeholder="输入网址" name="wd" type="text">
+            <button type="submit">搜索</button>
+        </form>
+
+    </header>
+    <main class="site-main">
+        <ul class='site-list'>
+            <li id="addSite">
+                <div class="add-site">
+                    <div class='icon-wrapper'>
+                        <svg class="icon">
+                            <use xlink:href="#icon-add-fill"></use>
+                        </svg>
+                    </div>
+                    <div class="add-text">
+                        请输入网址
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="//at.alicdn.com/t/font_1812694_4097dte9oay.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

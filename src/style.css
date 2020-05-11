@@ -1,0 +1,190 @@
+/* css reset */
+*{padding:0;margin:0;box-sizing:border-box;}
+*::before,*::after{box-sizing:border-box;}
+ul,ol{list-style: none;}
+a{color: inherit;text-decoration: none;}
+
+/* iconfont */
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+/* style */
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    
+}
+img{max-width: 100%;max-height: 100%;}
+
+.site-header{
+    margin:20px;
+}
+
+.site-header .lemon{
+    display: none;
+}
+.select-form{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.site-main{
+    max-width:900px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.select-form input{
+    width: 100%;
+    margin-right: 10px;
+    height: 40px;
+    padding:0 10px;
+    border:none;
+    border:1px solid #ddd;
+    border-radius:4px;
+}
+.select-form button{
+    white-space:nowrap;
+    padding:0 28px;
+    border:none;
+    border-radius: 4px;
+    color: white;
+    background-color: #0282B9;
+    font-size:16px;
+}
+
+.select-form button:hover{
+    cursor: pointer;
+}
+
+.site-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-between;
+}
+
+.site-list li{
+    margin-bottom: 10px;
+}
+
+.site-list li a:hover{
+    cursor: pointer;
+}
+.site-list .site{
+    width: 160px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color: #fff;
+    border-radius: 5px;
+    border:1px solid #ddd;
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+}
+.site-list .site .icon-wrapper{
+    width: 64px;
+    height:64px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:64px;
+    /* text-transform: uppercase; 全大写 */
+}
+.site-list .site .link{
+    font-size:14px;
+    margin-top:5px;
+}
+
+.site-list .site .close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.site-list .site:hover .close{
+    display: block;
+}
+
+.site-list .add-site{
+    width: 160px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding: 20px 0;
+    border-radius: 5px;
+    border:1px solid #ddd;
+    background-color: white;
+}
+
+.site-list .add-site .add-text{
+    font-size:14px;
+    margin-top:5px;
+}
+
+.site-list .add-site .icon{
+    width: 64px;
+    height: 64px;
+}
+
+.site-list .close .icon{
+    width: 22px;
+    height: 22px;
+}
+
+
+/* 媒体查询，相当于if...else...，样式会自动合并 */
+@media (min-width:500px){
+    body{
+        min-width: 100vw;
+        min-height: 100%;
+        
+    }
+
+    .site-header .lemon{
+        display: block;
+        width: 200px;
+        margin: 0 auto 50px;
+    }
+
+    .site-header .lemon .icon{
+        width: 200px;
+        height: 200px;
+    }
+
+    .site-header{
+        margin: 50px 0 50px 0;
+    }
+    .select-form{
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
+        /* 元素有固定宽度或者max/min宽度时可使用margin居中 */
+    }
+    .site-list li{
+        margin-right: 25px;
+    }
+
+    .site-list{
+        margin-right: -25px;
+        margin-left: 0;
+        justify-content: start;
+    }
+
+    .site-list .site .close{
+        display: none;
+    }
+
+    .site-list .site:hover .close{
+        display: block;
+        cursor:default;
+    }
+}
